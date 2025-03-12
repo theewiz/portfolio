@@ -310,9 +310,9 @@ main .main-items .bottom .content-container .right .first-box .line2 {
   gap: 10rem;
 }
 
-main .main-items .bottom .content-container .right .first-box .line3 {
+/* main .main-items .bottom .content-container .right .first-box .line3 {
   gap: 9rem;
-}
+} */
 
 main .main-items .bottom .content-container .right .first-box .line4 {
   gap: 10.7rem;
@@ -488,9 +488,9 @@ main .main-items .bottom .content-container .right .tenth-box .demo video {
     gap: 5rem;
   }
 
-  main .main-items .bottom .content-container .right .first-box .line3 {
+  /* main .main-items .bottom .content-container .right .first-box .line3 {
     gap: 4rem;
-  }
+  } */
 
   main .main-items .bottom .content-container .right .first-box .line4 {
     gap: 5.8rem;
