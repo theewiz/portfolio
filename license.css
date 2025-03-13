@@ -191,8 +191,8 @@ main .main-items .bottom {
   justify-content: start;
   align-items: center;
   font-family: var(--openSans);
-  /* padding: 6rem 0; */
-  /* background-color: beige; */
+  /* padding: 6rem 0;
+  background-color: beige; */
 }
 
 main .main-items .bottom .content-container {

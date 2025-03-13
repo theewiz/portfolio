@@ -235,8 +235,8 @@ main .main-items .bottom .content-container .right {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  /* padding: 6rem 0; */
-  /* background-color: rgb(254, 180, 180); */
+  padding: 6rem 0 0 0;
+  /* background-color: beige; */
 }
 
 main .main-items .bottom .content-container .right .first-box,
