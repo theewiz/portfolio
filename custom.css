@@ -235,7 +235,7 @@ main .main-items .bottom .content-container .right {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 6rem 0;
+  /* padding: 6rem 0; */
   /* background-color: rgb(254, 180, 180); */
 }
 
@@ -285,6 +285,60 @@ main .main-items .bottom .content-container .right .eleventh-box h1 {
   font-size: var(--fontSize-2);
   font-weight: 500;
 }
+
+main .main-items .bottom .content-container .right .sixth-box .businessGoalsList-container {
+  /* background-color: beige; */
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: 2rem;
+}
+
+main .main-items .bottom .content-container .right .sixth-box .businessGoalsList-container .businessGoal-top,
+main .main-items .bottom .content-container .right .sixth-box .businessGoalsList-container .businessGoal-bottom {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  column-gap: 2rem;
+  /* background-color: azure; */
+  /* padding: 1rem; */
+}
+
+main .main-items .bottom .content-container .right .sixth-box .businessGoalsList-container .businessGoal-top .goal,
+main .main-items .bottom .content-container .right .sixth-box .businessGoalsList-container .businessGoal-bottom .goal {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  border: .035rem solid hsla(0, 0%, 40%, 0.3);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+main .main-items .bottom .content-container .right .sixth-box .businessGoalsList-container .businessGoal-top .goal .content,
+main .main-items .bottom .content-container .right .sixth-box .businessGoalsList-container .businessGoal-bottom .goal .content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: .6rem;
+}
+
+main .main-items .bottom .content-container .right .sixth-box .businessGoalsList-container .businessGoal-top .goal .content p:nth-child(1),
+main .main-items .bottom .content-container .right .sixth-box .businessGoalsList-container .businessGoal-bottom .goal .content p:nth-child(1) {
+  font-weight: 600;
+}
+
+
 
 main .main-items .bottom .content-container .right .first-box .line {
   border-top: .05rem solid #D8D8D8;
@@ -510,6 +564,17 @@ main .main-items .bottom .content-container .right .tenth-box .demo video {
 
   main .main-items .bottom .content-container .right .first-box .line8 {
     gap: 2rem;
+  }
+
+  main .main-items .bottom .content-container .right .sixth-box .businessGoalsList-container .businessGoal-top,
+  main .main-items .bottom .content-container .right .sixth-box .businessGoalsList-container .businessGoal-bottom {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    row-gap: 2rem;
   }
 
   .container-neuton {
