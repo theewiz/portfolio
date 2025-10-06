@@ -282,7 +282,7 @@
 <path d="M460 223L465.977 245.307L482.307 228.977L460 223ZM472.728 235.728L471.314 237.142L540.586 306.414L542 305L543.414 303.586L474.142 234.314L472.728 235.728Z" fill="#FF5555"/>
 <path d="M1600 382L1577.69 387.977L1594.02 404.307L1600 382ZM1587.27 394.728L1585.86 393.314L1516.59 462.586L1518 464L1519.41 465.414L1588.69 396.142L1587.27 394.728Z" fill="#FF5555"/>
 </g>
-<rect x="0.5" y="0.5" width="1729" height="1118" rx="16.5" stroke="#82878E" stroke-opacity="0.5"/>
+<rect x="0.5" y="0.5" width="1729" height="1118" rx="16.5" stroke="#82878E" stroke-opacity="0.3"/>
 <defs>
 <pattern id="pattern0_427_139509" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_427_139509" transform="translate(0 -0.0403595) scale(0.003125)"/>
