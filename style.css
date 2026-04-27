@@ -299,9 +299,20 @@ main .main-items .main-bottom .main-bottom-down .content-container .content-cont
   cursor: pointer;
 }
 
-main .main-items .main-bottom .main-bottom-down .content-container .content-container-right img {
+main .main-items .main-bottom .main-bottom-down .content-container .content-container-right {
+  width: 40%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  /* background-color: rgba(0, 255, 0, 0.46); */
+}
+
+main .main-items .main-bottom .main-bottom-down .content-container .content-container-right video{
   width: 100%;
   height: auto;
+  border-radius: 1rem;
 }
 
 /* Tablet */
@@ -341,6 +352,16 @@ main .main-items .main-bottom .main-bottom-down .content-container .content-cont
     width: 100%;
     /* background-color: teal; */
   }
+
+    main .main-items .main-bottom .main-bottom-down .content-container .content-container-right {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      /* background-color: rgba(0, 255, 0, 0.46); */
+    }
 }
 
 
@@ -378,7 +399,7 @@ main .main-items .main-bottom .main-bottom-down .content-container .content-cont
     font-size: 1.25rem;
     font-weight: 500;
   }
-  
+
   main .main-items .main-bottom .main-bottom-down .content-container .content-container-left .body-link .body {
     font-family: var(--openSans);
     font-size: var(--fontSize-4);
