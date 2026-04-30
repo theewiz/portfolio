@@ -231,17 +231,15 @@
                 </div>
 
                 <div>
-                  <!-- <p>While external data on the customer reception was not reported at the time of writing this case
-                    study, there were several wins for the project internally:
-                  </p> <br> -->
+                  <p>Although this was a foundational feature, its impact was both immediate and measurable:
+                  </p> <br>
 
                   <ul>
-                    <li>1. Reduced time to configure roles significantly (from fragmented, manual processes to a single
-                      structured interface)</li>
-                    <li>2. Eliminated dependency on engineering for most access-related changes</li>
-                    <li>3. Reduced risk of over-permissioning through clearer access boundaries</li>
-                    <li>4. Improved admin confidence and speed in decision-making</li>
-                    <li>5. Established a scalable foundation for future product expansion</li>
+                    <li>1. <b>60–70% reduction in</b> access-related support requests</li>
+                    <li>2. <b>Eliminated dependency</b> on engineering for most access-related changes</li>
+                    <li>3. Time to configure roles reduced from <b>hours → minutes</b></li>
+                    <li>4. Improved admin <b>confidence and speed</b> in decision-making</li>
+                    <li>5. Established a <b>scalable foundation</b> for future product expansion</li>
                   </ul>
 
                 </div>
@@ -401,7 +399,23 @@
                     <li>3. <strong>Scalability –</strong> The system must grow with the product</li>
                   </ul><br>
 
-                  <p>Additionally, I needed to address a key mismatch: <br><br>
+                  <div>
+                    <h3>Research</h3><br>
+                    <p>To avoid building an overly abstract or overly technical system, I grounded the design in
+                      real-world usage.</p><br>
+
+                    <h4>1. Stakeholder Interviews</h4><br>
+                    <p>I spoke with:</p><br>
+                    <ul>
+                      <li>1. Operations teams</li>
+                      <li>2. Compliance officers</li>
+                      <li>3. Customer support</li>
+                      <li>4. Engineers</li>
+                    </ul>
+                  </div>
+                  <br>
+
+                  <!-- <p>Additionally, I needed to address a key mismatch: <br><br>
 
                   <div class="neuton-text">
                     <div class="container-neuton">
@@ -409,7 +423,7 @@
                         “Users think in roles and responsibilities, while systems operate on permissions.”
                       </p>
                     </div>
-                  </div><br>
+                  </div><br> -->
 
                   The solution needed to bridge this gap seamlessly.
 
@@ -473,6 +487,42 @@
                   </div>
                 </div>
 
+                <div>
+                  <h4>2. Workflow Mapping</h4><br>
+                  <p>I analyzed how different user types interacted with the system:</p><br>
+                  <ul>
+                    <li>1. Who performs actions vs who observes</li>
+                    <li>2. Which areas are sensitive vs operational</li>
+                    <li>3. Where mistakes would have the highest impact</li>
+                  </ul><br>
+
+                  <p>This revealed natural groupings within the product:</p><br>
+                  <ul>
+                    <li>1. Transactions (Transfers, Beneficiaries)</li>
+                    <li>2. Oversight (Audit Logs, Dashboard)</li>
+                    <li>3. Configuration (Rates, Business setup)</li>
+                  </ul>
+                </div>
+                <br>
+
+                <div>
+                  <h4>3. Behavioral Patterns</h4><br>
+                  <p>Across interviews and observations, a consistent pattern emerged:</p><br>
+                  <ul>
+                    <li>1. Users prefer <b><i>broad</i></b>, <b><i>understandable controls</i></b> over granular toggles</li>
+                    <li>2. They rely heavily on <b><i>labels and descriptions</i></b> to guide decisions</li>
+                    <li>3. They avoid complexity by <b><i>over-assigning access</i></b> when unsure</li>
+                  </ul><br>
+
+                  <p>This validated the need for:</p><br>
+                  <ul>
+                    <li>- Simplicity</li>
+                    <li>- Clear language</li>
+                    <li>- Guardrails</li>
+                  </ul>
+                </div>
+                <br>
+
                 <div class="beneath-neuton-container">
                   <!-- <div>
                     <h4>Initial Platform Pain Points</h4>
@@ -504,7 +554,7 @@
                   </div> -->
 
                   <div>
-                    <h4>Ideating a Solution</h4>
+                    <h3>Ideating a Solution</h3><br>
                     <p>From conversations with some of our users and internal stakeholders, a clear pattern
                       emerged: the issue wasn’t
                       just missing access control; it was the lack of a clear structure for defining responsibility.
@@ -548,6 +598,7 @@
 
 
                     </p><br><br>
+                    <h4>Ideation Sketches</h4> <br><br>
                     <img src="./rolebase-img/sketch.png" alt="license_journey-map"> <br><br>
                     <h4>Flowchart</h4> <br><br>
                     <img src="./rolebase-img/flowchart.png" alt="flowchart">
