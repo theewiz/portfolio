@@ -163,7 +163,7 @@ main .main-items {
 }
 
 main .main-items .main-top {
-  width: 70%;
+  width: 75%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -186,6 +186,7 @@ main .main-items .main-top .main-top-body .main-top-body-1 {
 main .main-items .main-top .main-top-body .main-top-body-1,
 main .main-items .main-top .main-top-body .main-top-body-2 {
   font-weight: 300;
+  font-size: 1.5rem;
 }
 
 main .main-items .main-top .main-top-links {
