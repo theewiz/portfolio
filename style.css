@@ -382,6 +382,12 @@ main .main-items .main-bottom .main-bottom-down .content-container .content-cont
     /* background-color: red; */
   }
 
+    main .main-items .main-top h1 {
+      /* background-color: white; */
+      font-size: 4rem;
+      font-weight: 400;
+    }
+
   main .main-items .main-bottom .main-bottom-down .content-container {
     width: 100%;
     height: auto;
@@ -432,7 +438,7 @@ main .main-items .main-bottom .main-bottom-down .content-container .content-cont
 
   main .main-items .main-top h1 {
     /* background-color: white; */
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 400;
   }
 
