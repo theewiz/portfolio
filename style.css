@@ -1,6 +1,8 @@
 /* Open Sans */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+
 /* inter */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
@@ -18,11 +20,12 @@
   --radius-1: 0.5rem;
 
   /* Colors */
-  --color-black: #000000;
-  --color-greyText: #777777;
+  --color-black: #14181D;
+  --color-greyText: #4A525B;
   --color-bgWhite: #FFFFFF;
   --color-offWhite: #FDFDFD;
   --color-blackGrey: #363737;
+  --color-blue: #1E90FF;
 
   /* Font Family */
   --inter: "Inter",
@@ -30,6 +33,8 @@
   --openSans: "Open Sans",
     sans-serif;
   --neuton: "Neuton",
+    serif;
+  --newsreader: "Newsreader",
     serif;
 
   /* Typography */
@@ -53,7 +58,8 @@
 }
 
 a {
-  color: var(--color-blackGrey);
+  color: var(--color-greyText);
+  text-decoration: none;
 }
 
 img {
@@ -81,7 +87,7 @@ nav {
   border-bottom: 0.031rem solid rgba(0, 0, 0, 0.052);
   position: sticky;
   top: 0;
-  color: var(--color-blackGrey);
+  color: var(--color-greyText);
 }
 
 nav .nav-items {
@@ -114,8 +120,15 @@ nav .nav-items .nav-item-left a {
   align-items: center;
 }
 
+nav .nav-items .nav-item-left a p {
+  font-family: var(--inter);
+  font-size: var(--fontSize-5);
+  color: var(--color-black);
+  font-weight: 500;
+}
+
 nav .nav-items .nav-item-left .wiz {
-  width: 50px;
+  width: 40px;
   height: auto;
 }
 
@@ -134,7 +147,7 @@ nav .nav-items .nav-item-right {
   gap: 2.5rem;
   font-family: var(--inter);
   font-size: var(--fontSize-5);
-  color: var(--color-blackGrey);
+  color: var(--color-greyText);
 }
 
 /* Nav Ends here */
@@ -171,25 +184,48 @@ main .main-items .main-top {
 }
 
 main .main-items .main-top h1 {
-  font-size: 3rem;
+  font-family: var(--newsreader);
+  font-size: 8rem;
+  letter-spacing: -0.35rem;
   font-weight: 400;
 }
 
+main .main-items .main-top h1 .surname {
+  font-style: italic;
+}
+
 main .main-items .main-top .main-top-body {
-  font-size: 1.75rem;
+  font-family: var(--newsreader);
 }
 
 main .main-items .main-top .main-top-body .main-top-body-1 {
   padding: 2rem 0;
 }
 
-main .main-items .main-top .main-top-body .main-top-body-1,
+main .main-items .main-top .main-top-body .main-top-body-1{
+  font-weight: 400;
+  font-size: 2rem;
+  letter-spacing: -0.02rem;
+  line-height: 1.3;
+  color: var(--color-black);
+}
+
 main .main-items .main-top .main-top-body .main-top-body-2 {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.5rem;
+  line-height: 1.3;
+  color: var(--color-black);
+}
+
+main .main-items .main-top .main-top-body .main-top-body-2 span a {
+  font-style: italic;
+  font-weight: 300;
+  text-decoration: none;
+  color: var(--color-greyText);
 }
 
 main .main-items .main-top .main-top-links {
+  font-family: var(--newsreader);
   width: 100%;
   height: auto;
   display: fleX;
@@ -206,6 +242,7 @@ main .main-items .main-top .main-top-links a {
   align-items: center;
   gap: .4rem;
   font-size: 1.25rem;
+
 }
 
 main .main-items .main-top .main-top-links a>p {
@@ -229,8 +266,8 @@ main .main-items .main-bottom {
 main .main-items .main-bottom .main-bottom-up p {
   padding-bottom: 1.2rem;
   border-bottom: .015rem solid rgba(128, 128, 128, 0.226);
-  font-size: var(--fontSize-3);
-  margin: 8rem 0;
+  font-size: var(--fontSize-4);
+  margin: 6rem 0;
 }
 
 main .main-items .main-bottom .main-bottom-down {
@@ -267,9 +304,14 @@ main .main-items .main-bottom .main-bottom-down .content-container .content-cont
 }
 
 main .main-items .main-bottom .main-bottom-down .content-container .content-container-left .heading h1 {
-  font-size: var(--fontSize-2);
+  font-family: var(--newsreader);
+  font-size: var(--fontSize-1);
   font-weight: 500;
   cursor: pointer;
+}
+
+main .main-items .main-bottom .main-bottom-down .content-container .content-container-left .heading h1 a {
+  color: var(--color-black);
 }
 
 main .main-items .main-bottom .main-bottom-down .content-container .content-container-left .heading h1:hover {
@@ -285,8 +327,9 @@ main .main-items .main-bottom .main-bottom-down .content-container .content-cont
 }
 
 main .main-items .main-bottom .main-bottom-down .content-container .content-container-left .body-link .body {
-  font-family: var(--openSans);
-  font-size: var(--fontSize-3);
+  font-family: var(--newsreader);
+  font-size: 1.25rem;
+  color: var(--color-greyText);
 }
 
 main .main-items .main-bottom .main-bottom-down .content-container .content-container-left .body-link .link {
