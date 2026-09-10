@@ -202,7 +202,7 @@ main .main-items .main-top .main-top-body .main-top-body-1 {
   padding: 2rem 0;
 }
 
-main .main-items .main-top .main-top-body .main-top-body-1{
+main .main-items .main-top .main-top-body .main-top-body-1 {
   font-weight: 400;
   font-size: 2rem;
   letter-spacing: -0.02rem;
@@ -353,7 +353,7 @@ main .main-items .main-bottom .main-bottom-down .content-container .content-cont
   /* background-color: rgba(0, 255, 0, 0.46); */
 }
 
-main .main-items .main-bottom .main-bottom-down .content-container .content-container-right video{
+main .main-items .main-bottom .main-bottom-down .content-container .content-container-right video {
   width: 100%;
   height: auto;
   border-radius: 1rem;
@@ -382,11 +382,11 @@ main .main-items .main-bottom .main-bottom-down .content-container .content-cont
     /* background-color: red; */
   }
 
-    main .main-items .main-top h1 {
-      /* background-color: white; */
-      font-size: 4rem;
-      font-weight: 400;
-    }
+  main .main-items .main-top h1 {
+    /* background-color: white; */
+    font-size: 4rem;
+    font-weight: 400;
+  }
 
   main .main-items .main-bottom .main-bottom-down .content-container {
     width: 100%;
@@ -403,15 +403,15 @@ main .main-items .main-bottom .main-bottom-down .content-container .content-cont
     /* background-color: teal; */
   }
 
-    main .main-items .main-bottom .main-bottom-down .content-container .content-container-right {
-      width: 100%;
-      height: auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-      align-items: start;
-      /* background-color: rgba(0, 255, 0, 0.46); */
-    }
+  main .main-items .main-bottom .main-bottom-down .content-container .content-container-right {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    /* background-color: rgba(0, 255, 0, 0.46); */
+  }
 }
 
 
@@ -444,6 +444,10 @@ main .main-items .main-bottom .main-bottom-down .content-container .content-cont
 
   main .main-items .main-top .main-top-body {
     font-size: 1.5rem;
+  }
+
+  main .main-items .main-bottom .main-bottom-down .content-container .content-container-left {
+    gap: 2rem;
   }
 
   main .main-items .main-bottom .main-bottom-down .content-container .content-container-left .heading h1 {
