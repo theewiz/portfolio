@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./images/wiz.png" type="image/x-icon">
   <link rel="stylesheet" href="bitcoin.css">
+  <link rel="stylesheet" href="nav-pinned.css">
   <!-- FontAwesomw CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
     integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
@@ -14,6 +15,24 @@
       https://cdn.jsdelivr.net/npm/phosphor-icons@1.4.2/src/css/icons.min.css
       " rel="stylesheet">
   <title>Wisdom-Portfolio</title>
+  <link rel="stylesheet" href="scroll-reveal.css">
+  <link rel="stylesheet" href="outline-spy.css">
+  <link rel="stylesheet" href="lightbox.css">
+  <script>
+    (function () {
+      var root = document.documentElement;
+      if (!('IntersectionObserver' in window)) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      root.classList.add('reveal-pending');
+      window.__revealFallbackTimer = window.setTimeout(function () {
+        root.classList.remove('reveal-pending', 'reveal-armed');
+        window.__revealTimedOut = true;
+      }, 2000);
+    })();
+  </script>
+  <script src="scroll-reveal.js" defer></script>
+  <script src="outline-spy.js" defer></script>
+  <script src="lightbox.js" defer></script>
 </head>
 
 <body>
@@ -28,7 +47,7 @@
             <div class="wiz">
               <img src="./images/wiz-tr.png" alt="">
             </div>
-            <p><b>@thelendu</b></p>
+            <p><b>Wisdom</b></p>
             <!-- <img src="./images/logo-wisdom.svg" alt="" class="logo"> -->
           </a>
         </div>
@@ -37,12 +56,6 @@
           <a href="custom.html">
             <li class="project">Previous project </li>
           </a>
-          <!-- <a href="#">
-                      <li class="resume">Resume</li>
-                    </a>
-                    <a href="#">
-                      <li class="about">About</li> 
-                    </a> -->
         </div>
       </div>
     </nav>
@@ -66,13 +79,13 @@
             </div>
 
             <div class="right">
-              <img src="./bitcoin-img/ree.svg" alt="">
+              <img src="./bitcoin-img/ree.svg" alt="" class="case-study-hero" data-lightbox="false">
             </div>
           </div>
         </section>
 
 
-        <section class="bottom">
+        <section class="bottom" data-lightbox="false">
           <div class="content-container">
 
             <div class="left">
@@ -81,7 +94,7 @@
               </div>
 
               <div class="left-bottom">
-                <a href="#keyDetails">
+                <a href="#keyDetails" class="is-active" aria-current="location">
                   <li class="keyDets">Key Details</li>
                 </a>
 
@@ -438,8 +451,8 @@
                   </div> <br><br>
 
                   <div class="musa-ilse">
-                    <img src="./bitcoin-img/musa.svg" alt=""> <br><br>
-                    <img src="./bitcoin-img/ilse.svg" alt="">
+                    <img src="./bitcoin-img/musa.svg" alt="Musa persona" class="user-img" data-lightbox="false"> <br><br>
+                    <img src="./bitcoin-img/ilse.svg" alt="Ilse persona" class="user-img" data-lightbox="false">
                   </div>
                 </div>
               </div>

@@ -1,0 +1,70 @@
+/* Shared scroll-reveal system for case studies.
+   Content is hidden only when JS + IntersectionObserver are available,
+   and the inline boot script in each page adds `reveal-pending` early. */
+
+:root {
+  --reveal-distance: 24px;
+  --reveal-distance-media: 20px;
+  --reveal-duration: 700ms;
+  --reveal-duration-media: 750ms;
+  --reveal-ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Pre-initialisation state: prevents a flash of un-animated content.
+   If the reveal script never runs, the boot fallback removes this state. */
+html.reveal-pending main .top .head,
+html.reveal-pending main .top .heading-img-container .right img,
+html.reveal-pending main .bottom .content-container .right :is(h1, h2, h3, h4, p, ul, img, video),
+html.reveal-pending main .bottom .content-container .right .goal,
+html.reveal-pending main .bottom .content-container .right .each-principle,
+html.reveal-pending main .bottom .content-container .right .eachImage-container,
+html.reveal-pending main .bottom .content-container .right .neuton-text,
+html.reveal-pending main .bottom .content-container .right .first-box .line {
+  opacity: 0;
+  transform: translate3d(0, var(--reveal-distance), 0);
+}
+
+/* Armed state: JS has tagged the targets and is observing them. */
+html.reveal-armed .reveal {
+  opacity: 0;
+  transform: translate3d(0, var(--reveal-distance), 0);
+  transition:
+    opacity var(--reveal-duration) var(--reveal-ease) var(--reveal-delay, 0ms),
+    transform var(--reveal-duration) var(--reveal-ease) var(--reveal-delay, 0ms);
+}
+
+html.reveal-armed .reveal--media {
+  transform: translate3d(0, var(--reveal-distance-media), 0);
+  transition-duration: var(--reveal-duration-media);
+}
+
+html.reveal-armed .reveal.is-visible,
+html.reveal-armed .reveal:focus-within {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (max-width: 760px) {
+  :root {
+    --reveal-distance: 16px;
+    --reveal-distance-media: 14px;
+    --reveal-duration: 600ms;
+    --reveal-duration-media: 650ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.reveal-pending main .top .head,
+  html.reveal-pending main .top .heading-img-container .right img,
+  html.reveal-pending main .bottom .content-container .right :is(h1, h2, h3, h4, p, ul, img, video),
+  html.reveal-pending main .bottom .content-container .right .goal,
+  html.reveal-pending main .bottom .content-container .right .each-principle,
+  html.reveal-pending main .bottom .content-container .right .eachImage-container,
+  html.reveal-pending main .bottom .content-container .right .neuton-text,
+  html.reveal-pending main .bottom .content-container .right .first-box .line,
+  html.reveal-armed .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

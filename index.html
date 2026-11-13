@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./images/wiz.png" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="nav-pinned.css">
+  <link rel="stylesheet" href="nav-indicator.css">
   <!-- FontAwesomw CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
     integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
@@ -29,14 +31,20 @@
             <div class="wiz">
               <img src="./images/wiz-tr.png" alt="">
             </div>
-            <p><b>@thelendu</b></p>
+            <p><b>Wisdom</b></p>
             <!-- <img src="./images/logo-wisdom.svg" alt="" class="logo"> -->
           </a>
         </div>
 
         <div class="nav-item-right">
           <a href="#live-project-section">
-            <li class="project">Projects</li>
+            <li class="project"><i class="ph ph-suitcase-simple" aria-hidden="true"></i><span class="nav-label-text">Projects</span></li>
+          </a>
+          <a href="about.html">
+            <li class="about"><i class="ph ph-user" aria-hidden="true"></i><span class="nav-label-text">About</span></li>
+          </a>
+          <a href="mailto:thelendu@gmail.com">
+            <li class="contact"><i class="ph ph-envelope-simple" aria-hidden="true"></i><span class="nav-label-text">Contact</span></li>
           </a>
         </div>
       </div>
@@ -206,6 +214,8 @@
     <!-- Main Ends here -->
 
   </div>
+
+  <script src="nav-indicator.js"></script>
 
 </body>
 

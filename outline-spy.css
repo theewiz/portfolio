@@ -1,0 +1,26 @@
+/* Shared outline scrollspy for case studies.
+   The current section's link is black; the rest are grey. */
+
+main .main-items .bottom .content-container .left .left-bottom a {
+  color: var(--color-greyText);
+  transition: color 160ms ease;
+}
+
+main .main-items .bottom .content-container .left .left-bottom a.is-active {
+  color: var(--color-black);
+}
+
+/* Underline only the width of the current link's text. */
+main .main-items .bottom .content-container .left .left-bottom a.is-active li {
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  text-decoration-skip-ink: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main .main-items .bottom .content-container .left .left-bottom a {
+    transition: none;
+  }
+}
