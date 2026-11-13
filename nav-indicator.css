@@ -10,6 +10,26 @@ nav .nav-items .nav-item-right > a > li {
   gap: 0.6rem;
 }
 
+nav .nav-items .nav-item-right > a > li i {
+  font-size: 1em;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+@media (max-width: 380px) {
+  nav .nav-items .nav-item-right {
+    gap: 0.75rem;
+  }
+
+  nav .nav-items .nav-item-right > a > li {
+    gap: 0.35rem;
+  }
+
+  nav .nav-items .nav-item-right > a > li i {
+    font-size: 0.95em;
+  }
+}
+
 nav .nav-items .nav-item-right > a > li .nav-label-text {
   position: relative;
   isolation: isolate;
