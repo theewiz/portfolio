@@ -232,10 +232,15 @@ main .main-items .about-top .about-editorial .about-editorial-headline {
   font-family: var(--inter);
   font-size: 32px;
   font-weight: 500;
-  line-height: 1.08;
+  line-height: 1.35;
   letter-spacing: -0.03em;
   color: var(--color-black);
   white-space: nowrap;
+  display: inline;
+  background-color: #b9e0f8;
+  padding: 0.08em 0.25em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 @media (max-width: 1100px) {
@@ -317,12 +322,54 @@ main .main-items .about-top .about-editorial .about-editorial-tools {
   gap: 1.25rem 1.5rem;
 }
 
+main .main-items .about-top .about-editorial .about-editorial-tools .about-editorial-tool {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 main .main-items .about-top .about-editorial .about-editorial-tools .about-editorial-tool-logo {
   height: 24px;
   width: auto;
   max-width: 24px;
   object-fit: contain;
   display: block;
+}
+
+main .main-items .about-top .about-editorial .about-editorial-tools .about-editorial-tool::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%) translateY(4px);
+  padding: 0.35rem 0.55rem;
+  border-radius: 6px;
+  background: #14181D;
+  color: #FDFDFD;
+  font-family: var(--inter);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s ease;
+  z-index: 10;
+}
+
+main .main-items .about-top .about-editorial .about-editorial-tools .about-editorial-tool:hover::after,
+main .main-items .about-top .about-editorial .about-editorial-tools .about-editorial-tool:focus-visible::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+main .main-items .about-top .about-editorial .about-editorial-tools .about-editorial-tool:focus-visible {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 main .main-items .about-top .about-top-button {
@@ -350,54 +397,97 @@ main .main-items .about-top .about-top-button i {
 
 main .main-items .about-top .about-top-long {
   width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-  gap: 1.2rem;
-  padding-top: 1.2rem;
-  font-family: var(--newsreader);
-  font-size: 18px;
-  letter-spacing: -0.02rem;
-  line-height: 32px;
-  color: var(--color-greyText);
+  padding-top: 1.75rem;
 }
 
 main .main-items .about-top .about-top-long[hidden] {
   display: none;
 }
 
-main .main-items .about-top .about-top-long p:has(+ .about-top-gallery) {
-  margin-bottom: calc(2.4rem - 1.2rem);
+main .main-items .about-top .about-top-long .about-long-inner {
+  width: 100%;
+  max-width: 72ch;
+  display: flex;
+  flex-direction: column;
+  gap: 2.75rem;
 }
 
-main .main-items .about-top .about-top-long .about-top-gallery {
+main .main-items .about-top .about-top-long .about-long-chapter {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+main .main-items .about-top .about-top-long p {
+  margin: 0;
+  font-family: var(--newsreader);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.85;
+  letter-spacing: -0.012em;
+  color: var(--color-greyText);
+}
+
+main .main-items .about-top .about-top-long .about-long-lead {
+  font-size: 22px;
+  line-height: 1.6;
+  letter-spacing: -0.02em;
+  color: var(--color-black);
+}
+
+main .main-items .about-top .about-top-long p strong {
+  font-weight: 500;
+  color: var(--color-black);
+}
+
+main .main-items .about-top .about-top-long .about-long-closing {
+  margin-top: 0.25rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(20, 24, 29, 0.1);
+  font-size: 19px;
+  line-height: 1.7;
+  color: var(--color-black);
+}
+
+main .main-items .about-top .about-top-long .about-top-gallery,
+main .main-items .about-top .about-top-long .about-long-gallery {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: start;
-  gap: 1.5rem;
+  gap: 1rem;
+}
+
+main .main-items .about-top .about-top-long .about-long-gallery-diptych {
+  gap: 1rem;
+}
+
+main .main-items .about-top .about-top-long .about-long-gallery-asym {
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 1rem;
+  align-items: start;
 }
 
 main .main-items .about-top .about-top-long .about-top-gallery.about-top-gallery-single {
   grid-template-columns: 1fr;
 }
 
-main .main-items .about-top .about-top-long .about-top-gallery .about-top-figure {
+main .main-items .about-top .about-top-long .about-top-gallery .about-top-figure,
+main .main-items .about-top .about-top-long .about-long-feature {
   min-width: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
 }
 
-main .main-items .about-top .about-top-long .about-top-gallery .about-top-figure .about-top-image {
+main .main-items .about-top .about-top-long .about-top-image {
   width: 100%;
   overflow: hidden;
   border-radius: 2px;
   background-color: var(--color-bgWhite);
 }
 
-main .main-items .about-top .about-top-long .about-top-gallery .about-top-figure .about-top-image img {
+main .main-items .about-top .about-top-long .about-top-image img {
   width: 100%;
   height: auto;
   display: block;
@@ -407,25 +497,41 @@ main .main-items .about-top .about-top-long .about-top-gallery .about-top-figure
 }
 
 @media (hover: hover) and (pointer: fine) {
-  main .main-items .about-top .about-top-long .about-top-gallery .about-top-figure:hover .about-top-image img {
+  main .main-items .about-top .about-top-long .about-top-gallery .about-top-figure:hover .about-top-image img,
+  main .main-items .about-top .about-top-long .about-long-feature:hover .about-top-image img {
     transform: scale(1.05);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  main .main-items .about-top .about-top-long .about-top-gallery .about-top-figure .about-top-image img {
+  main .main-items .about-top .about-top-long .about-top-image img {
     transition: none;
   }
 }
 
-main .main-items .about-top .about-top-long .about-top-gallery .about-top-figure .about-top-caption {
-  margin-top: 0.55rem;
+main .main-items .about-top .about-top-long .about-top-caption {
+  margin-top: 0.6rem;
   font-family: var(--inter);
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: -0.01em;
-  line-height: 1.4;
-  color: #787878;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: #8A9098;
+}
+
+main .main-items .about-top .about-top-long .about-long-feature {
+  width: 100%;
+  gap: 0;
+  margin: 0.5rem 0;
+}
+
+main .main-items .about-top .about-top-long .about-long-feature-image {
+  width: 100%;
+}
+
+main .main-items .about-top .about-top-long .about-long-feature-caption {
+  margin-top: 0.7rem;
 }
 
 /* Career journey Starts here */
@@ -863,9 +969,42 @@ main .main-items .team .team-grid .team-item .team-caption {
     width: 100%;
   }
 
-  main .main-items .about-top .about-top-long .about-top-gallery {
+  main .main-items .about-top .about-top-long {
+    padding-top: 1.5rem;
+  }
+
+  main .main-items .about-top .about-top-long .about-long-inner {
+    gap: 2.25rem;
+  }
+
+  main .main-items .about-top .about-top-long .about-long-chapter {
+    gap: 0.95rem;
+  }
+
+  main .main-items .about-top .about-top-long .about-long-lead {
+    font-size: 20px;
+    line-height: 1.55;
+  }
+
+  main .main-items .about-top .about-top-long p {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  main .main-items .about-top .about-top-long .about-top-gallery,
+  main .main-items .about-top .about-top-long .about-long-gallery,
+  main .main-items .about-top .about-top-long .about-long-gallery-asym {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
+    gap: 1.5rem;
+  }
+
+  main .main-items .about-top .about-top-long .about-long-feature {
+    margin: 0.25rem 0;
+  }
+
+  main .main-items .about-top .about-top-long .about-long-closing {
+    font-size: 18px;
+    padding-top: 1.5rem;
   }
 
   main .main-items .about-top .about-editorial {
@@ -878,6 +1017,7 @@ main .main-items .team .team-grid .team-item .team-caption {
 
   main .main-items .about-top .about-editorial .about-editorial-headline {
     max-width: 100%;
+    font-size: 24px;
   }
 
   main .main-items .about-top .about-editorial .about-editorial-intro {

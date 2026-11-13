@@ -12,3 +12,9 @@ nav {
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
 }
+
+@media (max-width: 760px) {
+  nav .nav-items .nav-item-left a p {
+    display: none;
+  }
+}
