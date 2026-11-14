@@ -668,3 +668,60 @@ main .main-items .bottom .content-container .right .tenth-box .demo video {
     font-size: 1rem;
   }
 }
+/* Key Metrics visual cards */
+main .main-items .bottom .content-container .right .third-box .metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+main .main-items .bottom .content-container .right .third-box .metric-card {
+  width: 100%;
+  background: var(--color-bgWhite);
+  border: 1px solid rgba(20, 24, 29, 0.08);
+  border-radius: 0.75rem;
+  padding: 1.1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  transition: border-color 0.25s ease;
+}
+
+main .main-items .bottom .content-container .right .third-box .metric-card:hover {
+  border-color: #b9e0f8;
+}
+
+main .main-items .bottom .content-container .right .third-box .metric-card .metric-value {
+  font-family: var(--inter);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-black);
+  margin: 0;
+}
+
+main .main-items .bottom .content-container .right .third-box .metric-card .metric-label {
+  font-family: var(--inter);
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--color-greyText);
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  main .main-items .bottom .content-container .right .third-box .metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  main .main-items .bottom .content-container .right .third-box .metric-card {
+    padding: 1rem;
+  }
+
+  main .main-items .bottom .content-container .right .third-box .metric-card .metric-value {
+    font-size: 20px;
+  }
+}

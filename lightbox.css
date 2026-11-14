@@ -71,6 +71,16 @@
   -webkit-user-drag: none;
 }
 
+.lightbox.lightbox--large .lightbox__figure {
+  max-width: 96vw;
+  max-height: 92vh;
+}
+
+.lightbox.lightbox--large .lightbox__image {
+  max-width: 96vw;
+  max-height: 92vh;
+}
+
 .lightbox__close {
   position: absolute;
   top: max(0.75rem, env(safe-area-inset-top));

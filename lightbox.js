@@ -14,19 +14,23 @@
     var images = Array.prototype.slice
       .call(bottom.querySelectorAll('img'))
       .filter(function (img) {
-        if (!img || img.closest('[data-lightbox="false"]')) return false;
-        if (img.closest('.case-study-hero')) return false;
-        if (img.classList.contains('case-study-hero')) return false;
-        if (img.classList.contains('user-img')) return false;
-        // Exclude persona/testimonial user images.
-        if (img.closest('.neuton-container')) return false;
-        if (img.closest('.container-neuton')) return false;
-        if (img.closest('.musa-ilse')) return false;
-        // Exclude key-metric/goal icons (small illustrative graphics), but keep
-        // actual screen/content visuals (e.g. bitcoin screen SVGs live in .img-row-1).
-        if (img.closest('.businessGoalsList-container')) return false;
-        if (img.closest('.key-metrics')) return false;
-        if (img.getAttribute('data-lightbox') === 'false') return false;
+        if (!img) return false;
+        var force = img.getAttribute('data-lightbox') === 'true';
+        if (!force) {
+          if (img.closest('[data-lightbox="false"]')) return false;
+          if (img.closest('.case-study-hero')) return false;
+          if (img.classList.contains('case-study-hero')) return false;
+          if (img.classList.contains('user-img')) return false;
+          // Exclude persona/testimonial user images.
+          if (img.closest('.neuton-container')) return false;
+          if (img.closest('.container-neuton')) return false;
+          if (img.closest('.musa-ilse')) return false;
+          // Exclude key-metric/goal icons (small illustrative graphics), but keep
+          // actual screen/content visuals (e.g. bitcoin screen SVGs live in .img-row-1).
+          if (img.closest('.businessGoalsList-container')) return false;
+          if (img.closest('.key-metrics')) return false;
+          if (img.getAttribute('data-lightbox') === 'false') return false;
+        }
         // Must have a usable source.
         if (!img.currentSrc && !img.getAttribute('src')) return false;
         return true;
@@ -150,6 +154,7 @@
       state.index = index;
       var src = img.currentSrc || img.getAttribute('src') || '';
       var alt = img.getAttribute('alt') || 'Case study image';
+      lightbox.el.classList.toggle('lightbox--large', !!img.closest('.musa-ilse'));
       lightbox.image.src = src;
       lightbox.image.alt = alt;
       lightbox.figure.setAttribute('aria-label', alt ? 'Image viewer: ' + alt : 'Image viewer');
@@ -214,7 +219,7 @@
       document.removeEventListener('keydown', onKeydown, true);
 
       var finish = function () {
-        lightbox.el.classList.remove('is-open', 'is-closing');
+        lightbox.el.classList.remove('is-open', 'is-closing', 'lightbox--large');
         lightbox.el.setAttribute('hidden', '');
         lightbox.el.setAttribute('aria-hidden', 'true');
         lightbox.image.removeAttribute('src');

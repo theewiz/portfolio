@@ -114,15 +114,16 @@
       locked = item;
       setActive(item);
 
-      // Native smooth scrolling lands the heading at the top of the viewport,
-      // clamped to the maximum scroll position.
+      // Native smooth scrolling lands the heading below the sticky nav
+      // (respecting scroll-margin-top), clamped to the maximum scroll position.
       var maxScroll = Math.max(
         0,
         document.documentElement.scrollHeight - window.innerHeight
       );
+      var marginTop = parseFloat(window.getComputedStyle(item.target).scrollMarginTop) || 0;
 
       lockTargetY = Math.min(
-        item.target.getBoundingClientRect().top + window.scrollY,
+        Math.max(0, item.target.getBoundingClientRect().top + window.scrollY - marginTop),
         maxScroll
       );
       lockStarted = Date.now();

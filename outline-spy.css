@@ -1,6 +1,10 @@
 /* Shared outline scrollspy for case studies.
    The current section's link is black; the rest are grey. */
 
+main .main-items .bottom .content-container .right [id] {
+  scroll-margin-top: 6rem;
+}
+
 main .main-items .bottom .content-container .left .left-bottom a {
   color: var(--color-greyText);
   transition: color 160ms ease;
