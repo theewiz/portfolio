@@ -1,16 +1,14 @@
 /* Pin the main navigation to the top of the viewport on every page.
-   A solid background keeps the bar visually still while content scrolls
-   underneath it. No blurred/transparent backdrop is used, so the bar cannot
-   appear to drift or shimmer during scroll (including in Safari). */
+   A glassy, blurred background keeps content readable as it scrolls underneath. */
 
 nav {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--color-offWhite, #FDFDFD);
-  -webkit-backdrop-filter: none;
-  backdrop-filter: none;
+  background-color: rgba(253, 253, 253, 0.72);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
 }
 
 @media (max-width: 760px) {

@@ -725,3 +725,89 @@ main .main-items .bottom .content-container .right .third-box .metric-card .metr
     font-size: 20px;
   }
 }
+
+/* UX Goals: connected flow */
+main .main-items .bottom .content-container .right .seventh-box .ux-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+main .main-items .bottom .content-container .right .seventh-box .ux-flow-step {
+  display: grid;
+  grid-template-columns: 2.25rem 1fr;
+  column-gap: 1rem;
+  align-items: start;
+}
+
+main .main-items .bottom .content-container .right .seventh-box .ux-flow-marker {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-self: stretch;
+}
+
+main .main-items .bottom .content-container .right .seventh-box .ux-flow-marker span {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  background: #b9e0f8;
+  color: var(--color-black);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--inter);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+
+main .main-items .bottom .content-container .right .seventh-box .ux-flow-marker::after {
+  content: "";
+  position: absolute;
+  top: 2rem;
+  bottom: -0.5rem;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: rgba(185, 224, 248, 0.8);
+}
+
+main .main-items .bottom .content-container .right .seventh-box .ux-flow-step:last-child .ux-flow-marker::after {
+  display: none;
+}
+
+main .main-items .bottom .content-container .right .seventh-box .ux-flow-content {
+  padding: 0.15rem 0 1.25rem;
+}
+
+main .main-items .bottom .content-container .right .seventh-box .ux-flow-step:last-child .ux-flow-content {
+  padding-bottom: 0.2rem;
+}
+
+main .main-items .bottom .content-container .right .seventh-box .ux-flow-content p {
+  margin: 0;
+  font-family: var(--inter);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-blackGrey);
+}
+
+@media (max-width: 760px) {
+  main .main-items .bottom .content-container .right .seventh-box .ux-flow-step {
+    grid-template-columns: 2rem 1fr;
+    column-gap: 0.75rem;
+  }
+
+  main .main-items .bottom .content-container .right .seventh-box .ux-flow-marker span {
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 0.85rem;
+  }
+
+  main .main-items .bottom .content-container .right .seventh-box .ux-flow-marker::after {
+    top: 1.8rem;
+  }
+}
