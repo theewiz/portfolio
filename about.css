@@ -204,7 +204,7 @@ main .main-items .about-top .about-top-body {
   font-family: var(--newsreader);
   padding: 2rem 0;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
   letter-spacing: -0.02rem;
   line-height: 32px;
   color: var(--color-greyText);
@@ -1040,7 +1040,7 @@ main .main-items .team .team-grid .team-item .team-caption {
   }
 
   main .main-items .about-top .about-top-body {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   main .main-items .career {
