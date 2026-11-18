@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="How Wisdom Elendu, a senior product designer, uses AI across research, design, prototyping and development — and where he deliberately does not.">
+  <link rel="shortcut icon" href="../images/wiz.png" type="image/x-icon">
+  <link rel="stylesheet" href="../ai.css">
+  <link rel="stylesheet" href="../nav-pinned.css">
+  <link rel="stylesheet" href="../nav-indicator.css">
+  <link rel="stylesheet" href="../lightbox.css">
+  <!-- FontAwesomw CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="
+    https://cdn.jsdelivr.net/npm/phosphor-icons@1.4.2/src/css/icons.min.css
+    " rel="stylesheet">
+  <title>How I Use AI - Wisdom Elendu</title>
+  <script src="../nav-indicator.js" defer></script>
+  <script src="../lightbox.js" defer></script>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Nav Starts here -->
+
+    <nav class="nav-container">
+      <div class="nav-items">
+        <div class="nav-item-left">
+          <a href="../index.html">
+            <div class="wiz">
+              <img src="../images/wiz-tr.png" alt="">
+            </div>
+            <p><b>Wisdom</b></p>
+          </a>
+        </div>
+
+        <div class="nav-item-right">
+          <a href="../index.html#live-project-section">
+            <li class="project"><i class="ph ph-suitcase-simple" aria-hidden="true"></i><span
+                class="nav-label-text">Projects</span></li>
+          </a>
+          <a href="index.html">
+            <li class="ai active"><i class="ph ph-sparkle" aria-hidden="true"></i><span class="nav-label-text">How I
+                Use AI</span></li>
+          </a>
+          <a href="../about.html">
+            <li class="about"><i class="ph ph-user" aria-hidden="true"></i><span class="nav-label-text">About</span>
+            </li>
+          </a>
+          <a href="mailto:thelendu@gmail.com">
+            <li class="contact"><i class="ph ph-envelope-simple" aria-hidden="true"></i><span
+                class="nav-label-text">Contact</span></li>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Nav Ends here -->
+
+    <!-- main Starts here -->
+
+    <main class="main-container">
+      <div class="main-items">
+
+        <header class="ai-hero">
+          <p class="ai-eyebrow">How I Use AI</p>
+
+          <h1>The Work I Do With AI</h1>
+
+          <p class="ai-hero-body">
+            AI is an integral part of how I work now. Here are some of the ways I use it, and the places where I trust
+            my own
+            judgment instead.
+
+          </p>
+
+          <p class="ai-hero-meta">
+            <span>Six ways I work with it</span>
+          </p>
+        </header>
+
+        <!-- Lightbox-enabled content region. Hero above stays outside it, so it
+        can never become a lightbox image. -->
+        <div class="bottom ai-body">
+
+          <section class="ai-section" id="design-and-build" aria-labelledby="ai-01-heading">
+            <p class="ai-num" aria-hidden="true">01</p>
+            <div class="ai-section-body">
+              <h2 id="ai-01-heading">I built my portfolio site with
+                <span class="ai-tool" data-tooltip="Antigravity" data-lightbox="false" tabindex="0"><img
+                    src="../logos/antigravity.svg" alt="Antigravity" class="ai-tool-logo" loading="lazy"
+                    decoding="async"></span>
+                <span class="ai-amp">&amp;</span>
+                <span class="ai-tool" data-tooltip="OpenCode" data-lightbox="false" tabindex="0"><img
+                    src="../logos/opencode-logo.svg" alt="OpenCode" class="ai-tool-logo" loading="lazy"
+                    decoding="async"></span>
+              </h2>
+
+              <p class="ai-p">
+                This portfolio site is built in Antigravity, with OpenCode as my coding agent. It is plain HTML, CSS and
+                JavaScript rather than a framework, but the pieces behave like a small design system: one navigation
+                with
+                its own active-state indicator, a reusable lightbox, scroll reveals, and case-study layouts that share
+                the same typography, spacing and page rules. I set the structure and the visual language, then worked
+                with the agent to write the markup and styles page by page &mdash; reviewing each result in the browser,
+                correcting what drifted, and deciding what was worth keeping. Because the components are genuinely
+                shared, adding a page or a navigation item happens once in the system instead of being rebuilt by hand
+                everywhere. I move between the two depending on the task.
+              </p>
+
+              <div class="ai-split">
+                <div>
+                  <h3>AI&rsquo;s part</h3>
+                  <ul>
+                    <li>Writing the markup and CSS for each page against the existing patterns</li>
+                    <li>Extending shared pieces &mdash; navigation, lightbox, reveals &mdash; across pages</li>
+                    <li>Producing variations fast enough to compare in the browser</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3>My part</h3>
+                  <ul>
+                    <li>Page structure, typography, spacing, and interaction decisions</li>
+                    <li>Defining the shared components every page is built from</li>
+                    <li>Reviewing each page, correcting drift, and holding the quality bar</li>
+                  </ul>
+                </div>
+              </div>
+
+              <figure class="ai-figure">
+                <img src="../images/samples/code-port.svg"
+                  alt="Side-by-side view of the portfolio code and the rendered page it produces" width="1546"
+                  height="623" loading="lazy" decoding="async">
+                <figcaption class="ai-caption">Code and built page, side by side &mdash; the shared structure in the
+                  source and the result in the browser.</figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <section class="ai-section" id="research" aria-labelledby="ai-02-heading">
+            <p class="ai-num" aria-hidden="true">02</p>
+            <div class="ai-section-body">
+              <h2 id="ai-02-heading">I use AI to structure my research
+              </h2>
+
+              <p class="ai-p">
+                Research on regulatory and financial products produces a lot of unstructured material: interview notes,
+                screenshots of legacy tools, policy documents, internal review transcripts. I use AI to make that
+                material easier to hold in my head &mdash; grouping notes by theme, summarizing what a document actually
+                requires, comparing how two people described the same workflow, and drafting the next round of
+                questions. In an unfamiliar problem space it is also a fast way to surface vocabulary and areas I have
+                not thought to ask about.
+              </p>
+
+              <p class="ai-p">
+                The discipline is that everything it produces is a hypothesis. A theme only becomes real to me when I
+                can point to the quotes behind it. So I go back to the source material, check the summary against what
+                people actually said, and treat the model&rsquo;s reading as one interpretation among several. The
+                questions it helps me prepare are for real conversations, not a replacement for them.
+              </p>
+
+              <p class="ai-p">
+                What it buys me is time and coverage. The first pass through a messy pile of material is faster, which
+                leaves more room for the work only I can do: talking to people, testing my reading of the problem, and
+                deciding what the evidence supports.
+              </p>
+
+              <div class="ai-split">
+                <div>
+                  <h3>AI&rsquo;s part</h3>
+                  <ul>
+                    <li>Clustering notes and transcripts into candidate themes</li>
+                    <li>Summarizing long policy and research documents</li>
+                    <li>Drafting question sets and alternative interpretations</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3>My part</h3>
+                  <ul>
+                    <li>Running the interviews and holding the context</li>
+                    <li>Verifying themes against quotes and evidence</li>
+                    <li>Deciding what the research actually means</li>
+                  </ul>
+                </div>
+              </div>
+
+              <figure class="ai-figure">
+                <img src="../images/samples/sam.png"
+                  alt="UX research transcript for License Application Management with three speaker sections"
+                  width="2702" height="1588" loading="lazy" decoding="async">
+                <figcaption class="ai-caption">Interview excerpts organized into speaker blocks. I use AI to surface
+                  candidate themes, then check each one against the original quotes.</figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <section class="ai-section" id="directions" aria-labelledby="ai-03-heading">
+            <p class="ai-num" aria-hidden="true">03</p>
+            <div class="ai-section-body">
+              <h2 id="ai-03-heading">I use AI to explore multiple design directions</h2>
+
+              <p class="ai-p ai-p--lede">
+                Before I commit to a direction, I want to have seen more than one.
+              </p>
+
+              <p class="ai-p">
+                For a complex workflow &mdash; filtering a large dataset, configuring a multi-step rule, deciding how
+                much of a permission system to expose at once &mdash; I use AI to rough out three or four structural
+                directions before I open Figma. These are deliberately cheap: wireframe-level, focused on how
+                information is organized and how much the user has to hold in their head, not on visual polish.
+              </p>
+
+              <p class="ai-p">
+                Comparing them side by side exposes what a single direction hides. A two-pane layout may scan faster but
+                fail on small screens; a guided flow may handle edge cases cleanly but make a routine task feel heavy.
+                The model can generate the alternatives quickly, but it cannot tell me which trade-off is right for this
+                product and these users. That judgment comes from the requirements, the evidence, and the constraints
+                we actually have.
+              </p>
+
+              <p class="ai-p">
+                The strongest direction is the one that goes into Figma. Refinement, component work, and detailed states
+                all happen there, by hand. AI expands the solution space; it does not decide where to land.
+              </p>
+
+              <figure class="ai-figure">
+                <img src="../images/samples/early.png"
+                  alt="Early low-fidelity wireframe explorations for a filtering workflow" width="1536" height="1024"
+                  loading="lazy" decoding="async">
+                <figcaption class="ai-caption">Early, low-fidelity explorations I use to compare structure before
+                  committing to a direction in Figma.</figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <section class="ai-section" id="critique" aria-labelledby="ai-04-heading">
+            <p class="ai-num" aria-hidden="true">04</p>
+            <div class="ai-section-body">
+              <h2 id="ai-04-heading">I have AI assume the role of an expert to critique my work</h2>
+
+              <p class="ai-p ai-p--lede">
+                The most useful thing I do with AI is let it argue with me &mdash; early, before the work is polished
+                and before it reaches a stakeholder.
+              </p>
+
+              <p class="ai-p">
+                I ask AI to review my ideas from different perspectives, such as a target user, product manager, or
+                marketing lead. I
+                can share an early concept, a rough idea, or simple wireframes and get feedback from each point of view.
+                This helps me
+                spot problems, challenge my thinking, and improve the idea before sharing it with real stakeholders.
+              </p>
+
+              <div class="ai-split">
+                <div>
+                  <h3>AI&rsquo;s part</h3>
+                  <ul>
+                    <li>Reading a flow from several stakeholder perspectives</li>
+                    <li>Naming missing states, edge cases, and ambiguities</li>
+                    <li>Producing a fast, broad first critique</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3>My part</h3>
+                  <ul>
+                    <li>Deciding which critiques are valid for this product</li>
+                    <li>Weighing suggestions against user evidence and constraints</li>
+                    <li>Owning the iteration and the final design</li>
+                  </ul>
+                </div>
+              </div>
+
+              <figure class="ai-figure">
+                <img src="../images/samples/Three-Level%20Critique%20Log.png"
+                  alt="Three-Level Critique Log showing expert-perspective feedback on an interface concept"
+                  width="1536" height="1024" loading="lazy" decoding="async">
+                <figcaption class="ai-caption">Three levels of critique in one log. I sort the feedback, keep what holds
+                  up, and decide what changes next.</figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <section class="ai-section" id="workflows" aria-labelledby="ai-05-heading">
+            <p class="ai-num" aria-hidden="true">05</p>
+            <div class="ai-section-body">
+              <h2 id="ai-05-heading">I create custom AI skills to make my workflow consistent and repeatable</h2>
+
+              <p class="ai-p ai-p--lede">
+                A good prompt is not a workflow. What makes AI consistently useful is the system around it.
+              </p>
+
+              <p class="ai-p">
+                I create custom AI skills with my own rules for writing, naming, and structuring things. This helps AI
+                produce
+                consistent results that match my style, rather than generic content I have to rewrite. It also makes my
+                workflow easier
+                to repeat and saves time across projects.
+              </p>
+
+              <div class="ai-split">
+                <div>
+                  <h3>AI&rsquo;s part</h3>
+                  <ul>
+                    <li>Following my custom rules for writing, naming, and structure</li>
+                    <li>Applying the same conventions each time instead of defaulting to generic output</li>
+                    <li>Producing results that are closer to my style and easier to reuse</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3>My part</h3>
+                  <ul>
+                    <li>Defining the rules, voice, naming, and structure inside each skill</li>
+                    <li>Deciding what consistency looks like across projects</li>
+                    <li>Reviewing the output and refining the skill whenever it drifts</li>
+                  </ul>
+                </div>
+              </div>
+
+              <ol class="ai-flow" aria-label="How a custom AI skill is defined, applied and refined">
+                <li>
+                  <span class="ai-flow-step">01</span>
+                  <h4>Define rules</h4>
+                  <p>Writing, naming, and structure I want repeated</p>
+                </li>
+                <li>
+                  <span class="ai-flow-step">02</span>
+                  <h4>Save the skill</h4>
+                  <p>The rules live in one reusable place</p>
+                </li>
+                <li>
+                  <span class="ai-flow-step">03</span>
+                  <h4>Apply</h4>
+                  <p>AI works from the skill, not a blank prompt</p>
+                </li>
+                <li>
+                  <span class="ai-flow-step">04</span>
+                  <h4>Review</h4>
+                  <p>Output checked against my style and conventions</p>
+                </li>
+                <li>
+                  <span class="ai-flow-step">05</span>
+                  <h4>Refine</h4>
+                  <p>Drift corrected in the skill for the next project</p>
+                </li>
+              </ol>
+
+              <p class="ai-flow-note">The skill is the repeatable part: each project reuses the same rules, and only the
+                drift gets edited.</p>
+
+              <figure class="ai-figure">
+                <img src="../images/samples/skill.png"
+                  alt="Custom AI skill file showing reusable rules for writing, naming, and structure" width="2098"
+                  height="1460" loading="lazy" decoding="async">
+                <figcaption class="ai-caption">A custom AI skill with my rules built in, so the writing, naming, and
+                  structure stay consistent from one project to the next.</figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <section class="ai-section" id="automation" aria-labelledby="ai-06-heading">
+            <p class="ai-num" aria-hidden="true">06</p>
+            <div class="ai-section-body">
+              <h2 id="ai-06-heading">I design systems that coordinate work across autonomous agents</h2>
+
+              <p class="ai-p ai-p--lede">
+                I stopped treating AI as one prompt and started designing it as a small team of agents with clear roles.
+              </p>
+
+              <p class="ai-p">
+                I use a team of agents to audit a product's core flows from start to finish. One navigates the
+                experience and captures
+                each screen. Another evaluates the screens against Nielsen's usability heuristics and my own review
+                checklist. A third
+                prioritizes the findings by severity, while the fourth turns them into actionable reports, pairing each
+                issue with a
+                screenshot and a suggested fix.
+
+                I review the findings, filter out false positives, and decide which issues deserve attention. The agents
+                handle the
+                initial investigation and documentation. I bring the judgment, context, and design decisions.
+              </p>
+
+              <div class="ai-split">
+                <div>
+                  <h3>AI&rsquo;s part</h3>
+                  <ul>
+                    <li>Classification where the criteria are genuinely fuzzy</li>
+                    <li>Drafting and refining the evaluation logic</li>
+                    <li>Speeding up the build of the pipeline itself</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3>My part</h3>
+                  <ul>
+                    <li>Defining what &ldquo;relevant&rdquo; means</li>
+                    <li>Reviewing the shortlist and making the decision</li>
+                    <li>Tuning the criteria when the output drifts</li>
+                  </ul>
+                </div>
+              </div>
+
+              <ol class="ai-flow" aria-label="DesignRadar pipeline, drawn as a schematic">
+                <li>
+                  <span class="ai-flow-step">01</span>
+                  <h4>Discover</h4>
+                  <p>Sources and role searches I already trust</p>
+                </li>
+                <li>
+                  <span class="ai-flow-step">02</span>
+                  <h4>Crawl</h4>
+                  <p>Collect and normalize postings into one format</p>
+                </li>
+                <li>
+                  <span class="ai-flow-step">03</span>
+                  <h4>Evaluate</h4>
+                  <p>Score each role against defined relevance criteria</p>
+                </li>
+                <li>
+                  <span class="ai-flow-step">04</span>
+                  <h4>Qualify</h4>
+                  <p>Drop weak matches; keep what clears the bar</p>
+                </li>
+                <li>
+                  <span class="ai-flow-step">05</span>
+                  <h4>Notify</h4>
+                  <p>Send the shortlist to my inbox on a schedule</p>
+                </li>
+              </ol>
+
+              <p class="ai-flow-note">Schematic of DesignRadar as built: a scheduled backend pipeline with no
+                user-facing UI.</p>
+
+              <figure class="ai-figure">
+                <div class="ai-ph">
+                  <span class="ai-ph-tag">Placeholder</span>
+                  <p class="ai-ph-title">A scheduled run &mdash; terminal output or email</p>
+                  <p class="ai-ph-note">Replace with a screenshot of a real run or a sample of the notification email.
+                  </p>
+                </div>
+                <figcaption class="ai-caption">Placeholder for the system&rsquo;s actual output.</figcaption>
+              </figure>
+            </div>
+          </section>
+
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Main Ends here -->
+
+  </div>
+
+</body>
+
+</html>

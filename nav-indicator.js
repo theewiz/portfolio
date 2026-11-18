@@ -1,8 +1,21 @@
 /* Shared active-state underline for the main site navigation.
-   Projects tracks the projects section on the home page and About is active
-   on the about page. Only one navigation item can be active at a time. */
+   Projects tracks the projects section on the home page; About, How I Use AI
+   and Contact-style page links resolve to whichever page is being viewed.
+   Only one navigation item can be active at a time. */
 (function () {
   'use strict';
+
+  // "/ai", "/ai/" and "/ai/index.html" are the same page as far as the
+  // indicator is concerned.
+  function normalisePath(pathname) {
+    var path = pathname.replace(/\/index\.html?$/i, '/');
+
+    if (path.length > 1) {
+      path = path.replace(/\/+$/, '');
+    }
+
+    return path;
+  }
 
   function init() {
     var nav = document.querySelector('nav .nav-items .nav-item-right');
@@ -29,7 +42,10 @@
         var id = item.href.charAt(0) === '#' ? item.href.slice(1) : '';
         item.target = id ? document.getElementById(id) : null;
         projectsItem = item;
-      } else if (!label.classList.contains('about')) {
+      } else if (
+        !label.classList.contains('about') &&
+        !label.classList.contains('ai')
+      ) {
         // Contact and any other item never receive the indicator.
         return;
       }
@@ -47,7 +63,7 @@
       if (
         url &&
         url.origin === window.location.origin &&
-        url.pathname === window.location.pathname &&
+        normalisePath(url.pathname) === normalisePath(window.location.pathname) &&
         !url.hash
       ) {
         pageActive = item;

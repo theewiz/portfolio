@@ -33,6 +33,7 @@ nav .nav-items .nav-item-right > a > li i {
 nav .nav-items .nav-item-right > a > li .nav-label-text {
   position: relative;
   isolation: isolate;
+  white-space: nowrap;
 }
 
 nav .nav-items .nav-item-right > a > li .nav-label-text::after {
@@ -59,11 +60,34 @@ nav .nav-items .nav-item-right > a > li.about .nav-label-text::after {
   background-color: #B9E0F8;
 }
 
+nav .nav-items .nav-item-right > a > li.ai .nav-label-text::after {
+  background-color: #DCD5F7;
+}
+
 nav .nav-items .nav-item-right > a > li.project.is-active .nav-label-text::after,
 nav .nav-items .nav-item-right > a > li.project.active .nav-label-text::after,
 nav .nav-items .nav-item-right > a > li.about.is-active .nav-label-text::after,
-nav .nav-items .nav-item-right > a > li.about.active .nav-label-text::after {
+nav .nav-items .nav-item-right > a > li.about.active .nav-label-text::after,
+nav .nav-items .nav-item-right > a > li.ai.is-active .nav-label-text::after,
+nav .nav-items .nav-item-right > a > li.ai.active .nav-label-text::after {
   opacity: 1;
+}
+
+/* Four items plus the wordmark need more room on narrow screens: keep the
+   labels, drop the icons, and tighten the gaps. */
+@media (max-width: 620px) {
+  nav .nav-items .nav-item-right {
+    gap: 1rem;
+    font-size: 0.7rem;
+  }
+
+  nav .nav-items .nav-item-right > a > li {
+    gap: 0;
+  }
+
+  nav .nav-items .nav-item-right > a > li i {
+    display: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
