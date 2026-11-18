@@ -79,15 +79,27 @@
             judgment instead.
 
           </p>
-
-          <p class="ai-hero-meta">
-            <span>Six ways I work with it</span>
-          </p>
         </header>
 
         <!-- Lightbox-enabled content region. Hero above stays outside it, so it
         can never become a lightbox image. -->
         <div class="bottom ai-body">
+          <div class="ai-content-layout">
+            <aside class="ai-toc" aria-label="On this page">
+              <p class="ai-toc-title">On this page</p>
+              <nav>
+                <ol class="ai-toc-list">
+                  <li><a href="#design-and-build"><span class="ai-toc-num">01</span><span>Build my portfolio site</span></a></li>
+                  <li><a href="#research"><span class="ai-toc-num">02</span><span>Structure my research</span></a></li>
+                  <li><a href="#directions"><span class="ai-toc-num">03</span><span>Explore design directions</span></a></li>
+                  <li><a href="#critique"><span class="ai-toc-num">04</span><span>Expert critique of my work</span></a></li>
+                  <li><a href="#workflows"><span class="ai-toc-num">05</span><span>Custom AI skills</span></a></li>
+                  <li><a href="#automation"><span class="ai-toc-num">06</span><span>Coordinate autonomous agents</span></a></li>
+                </ol>
+              </nav>
+            </aside>
+
+            <div class="ai-sections">
 
           <section class="ai-section" id="design-and-build" aria-labelledby="ai-01-heading">
             <p class="ai-num" aria-hidden="true">01</p>
@@ -103,7 +115,7 @@
               </h2>
 
               <p class="ai-p">
-                This portfolio site is built in Antigravity, with OpenCode as my coding agent. It is plain HTML, CSS and
+                This portfolio site is built in Antigravity, with OpenCode (<a href="https://pi.dev/models/opencode/big-pickle" target="_blank" rel="noopener noreferrer" style="color: var(--color-greyText); text-decoration: underline;">Big Pickle model</a>) as my coding agent. It is plain HTML, CSS and
                 JavaScript rather than a framework, but the pieces behave like a small design system: one navigation
                 with
                 its own active-state indicator, a reusable lightbox, scroll reveals, and case-study layouts that share
@@ -233,7 +245,7 @@
                 <img src="../images/samples/early.png"
                   alt="Early low-fidelity wireframe explorations for a filtering workflow" width="1536" height="1024"
                   loading="lazy" decoding="async">
-                <figcaption class="ai-caption">Early, low-fidelity explorations I use to compare structure before
+                <figcaption class="ai-caption">Early explorations I use to compare structure before
                   committing to a direction in Figma.</figcaption>
               </figure>
             </div>
@@ -390,64 +402,60 @@
                 <div>
                   <h3>AI&rsquo;s part</h3>
                   <ul>
-                    <li>Classification where the criteria are genuinely fuzzy</li>
-                    <li>Drafting and refining the evaluation logic</li>
-                    <li>Speeding up the build of the pipeline itself</li>
+                    <li>Walking core flows and capturing every screen</li>
+                    <li>Evaluating screens against Nielsen&rsquo;s heuristics and my review checklist</li>
+                    <li>Scoring issues by severity, grouping findings, and drafting reports with screenshots and suggested fixes</li>
                   </ul>
                 </div>
                 <div>
                   <h3>My part</h3>
                   <ul>
-                    <li>Defining what &ldquo;relevant&rdquo; means</li>
-                    <li>Reviewing the shortlist and making the decision</li>
-                    <li>Tuning the criteria when the output drifts</li>
+                    <li>Reviewing findings and filtering out false positives</li>
+                    <li>Deciding which issues deserve attention</li>
+                    <li>Applying judgment, product context, and design decisions</li>
                   </ul>
                 </div>
               </div>
 
-              <ol class="ai-flow" aria-label="DesignRadar pipeline, drawn as a schematic">
+              <ol class="ai-flow ai-flow--six" aria-label="Agent audit flow">
                 <li>
-                  <span class="ai-flow-step">01</span>
-                  <h4>Discover</h4>
-                  <p>Sources and role searches I already trust</p>
+                  <span class="ai-flow-step">Agent 01</span>
+                  <h4>Capture</h4>
+                  <p>Follows the main flows and captures all screens.</p>
                 </li>
                 <li>
-                  <span class="ai-flow-step">02</span>
-                  <h4>Crawl</h4>
-                  <p>Collect and normalize postings into one format</p>
-                </li>
-                <li>
-                  <span class="ai-flow-step">03</span>
+                  <span class="ai-flow-step">Agent 02</span>
                   <h4>Evaluate</h4>
-                  <p>Score each role against defined relevance criteria</p>
+                  <p>Checks each screen using Nielsen's heuristics and my checklist.</p>
                 </li>
                 <li>
-                  <span class="ai-flow-step">04</span>
-                  <h4>Qualify</h4>
-                  <p>Drop weak matches; keep what clears the bar</p>
+                  <span class="ai-flow-step">Agent 03</span>
+                  <h4>Rank</h4>
+                  <p>Scores each issue by severity and groups them.</p>
                 </li>
                 <li>
-                  <span class="ai-flow-step">05</span>
-                  <h4>Notify</h4>
-                  <p>Send the shortlist to my inbox on a schedule</p>
+                  <span class="ai-flow-step">Agent 04</span>
+                  <h4>Write-up</h4>
+                  <p>Documents each finding with a screenshot, issue, and fix.</p>
+                </li>
+                <li>
+                  <span class="ai-flow-step">Me</span>
+                  <h4>Wisdom</h4>
+                  <p>I remove all false alarms and decide what's worth fixing.</p>
+                </li>
+                <li>
+                  <span class="ai-flow-step">Outcome</span>
+                  <h4>Findings</h4>
+                  <p>A ranked list ready for action or sharing.</p>
                 </li>
               </ol>
 
-              <p class="ai-flow-note">Schematic of DesignRadar as built: a scheduled backend pipeline with no
-                user-facing UI.</p>
-
-              <figure class="ai-figure">
-                <div class="ai-ph">
-                  <span class="ai-ph-tag">Placeholder</span>
-                  <p class="ai-ph-title">A scheduled run &mdash; terminal output or email</p>
-                  <p class="ai-ph-note">Replace with a screenshot of a real run or a sample of the notification email.
-                  </p>
-                </div>
-                <figcaption class="ai-caption">Placeholder for the system&rsquo;s actual output.</figcaption>
-              </figure>
+              <p class="ai-flow-note">How the agent audit flow hands off work, with my review and judgment at the end.</p>
             </div>
           </section>
 
+            </div>
+          </div>
         </div>
 
       </div>
@@ -456,6 +464,128 @@
     <!-- Main Ends here -->
 
   </div>
+
+  <script>
+    (function () {
+      var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.ai-toc-list a[href^="#"]'));
+      var sections = tocLinks.map(function (link) {
+        var id = (link.getAttribute('href') || '').slice(1);
+        return { link: link, section: id ? document.getElementById(id) : null };
+      }).filter(function (item) { return item.section; });
+
+      if (!sections.length) return;
+
+      var current = null;
+      var locked = null;
+      var lockFrame = 0;
+      var lockTargetY = 0;
+      var lockStarted = 0;
+
+      function setActive(item) {
+        if (item === current) return;
+        if (current) {
+          current.link.classList.remove('is-active');
+          current.link.removeAttribute('aria-current');
+        }
+        current = item;
+        if (current) {
+          current.link.classList.add('is-active');
+          current.link.setAttribute('aria-current', 'location');
+        }
+      }
+
+      function update() {
+        if (locked) return;
+
+        var offset = Math.min(180, window.innerHeight * 0.28);
+        var atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+        var active = sections[0];
+        var bestTop = -Infinity;
+
+        if (atBottom) {
+          active = sections[sections.length - 1];
+        } else {
+          sections.forEach(function (item) {
+            var top = item.section.getBoundingClientRect().top;
+            if (top <= offset && top > bestTop) {
+              bestTop = top;
+              active = item;
+            }
+          });
+        }
+        setActive(active);
+      }
+
+      function endLock() {
+        if (!locked) return;
+        locked = null;
+        if (lockFrame) {
+          window.cancelAnimationFrame(lockFrame);
+          lockFrame = 0;
+        }
+        update();
+      }
+
+      function checkLock() {
+        lockFrame = 0;
+        if (!locked) return;
+        var atDestination = Math.abs(window.scrollY - lockTargetY) <= 2;
+        if (atDestination || Date.now() - lockStarted > 3000) {
+          endLock();
+          return;
+        }
+        lockFrame = window.requestAnimationFrame(checkLock);
+      }
+
+      function lockTo(item) {
+        locked = item;
+        setActive(item);
+
+        var maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+        var marginTop = parseFloat(window.getComputedStyle(item.section).scrollMarginTop) || 0;
+        lockTargetY = Math.min(
+          Math.max(0, item.section.getBoundingClientRect().top + window.scrollY - marginTop),
+          maxScroll
+        );
+        lockStarted = Date.now();
+
+        if (lockFrame) window.cancelAnimationFrame(lockFrame);
+        lockFrame = window.requestAnimationFrame(checkLock);
+      }
+
+      var ticking = false;
+      function onScroll() {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(function () {
+          ticking = false;
+          update();
+        });
+      }
+
+      tocLinks.forEach(function (link) {
+        link.addEventListener('click', function (event) {
+          if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+          if (event.button !== 0) return;
+          var id = (link.getAttribute('href') || '').slice(1);
+          var item = sections.find(function (s) { return s.section && s.section.id === id; });
+          if (item) lockTo(item);
+        });
+      });
+
+      function releaseLock() {
+        if (locked) endLock();
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      window.addEventListener('load', update);
+      window.addEventListener('wheel', releaseLock, { passive: true });
+      window.addEventListener('touchmove', releaseLock, { passive: true });
+      window.addEventListener('keydown', releaseLock);
+      update();
+    })();
+  </script>
 
 </body>
 
