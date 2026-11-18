@@ -190,8 +190,9 @@ main .main-items .about-top {
 
 main .main-items .about-top h1 {
   font-family: var(--newsreader);
-  font-size: 84px;
-  letter-spacing: -0.35rem;
+  font-size: clamp(2.75rem, 6vw, 5.25rem);
+  letter-spacing: -0.035em;
+  line-height: 1.02;
   font-weight: 400;
   color: var(--color-black);
 }
@@ -904,7 +905,6 @@ main .main-items .team .team-grid .team-item .team-caption {
   }
 
   main .main-items .about-top h1 {
-    font-size: 4rem;
     font-weight: 400;
   }
 
@@ -1035,8 +1035,7 @@ main .main-items .team .team-grid .team-item .team-caption {
   }
 
   main .main-items .about-top h1 {
-    font-size: 3.5rem;
-    font-weight: 400;
+    font-size: 2.5rem;
   }
 
   main .main-items .about-top .about-top-body {

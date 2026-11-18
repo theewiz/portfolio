@@ -326,12 +326,11 @@ main .main-items {
 
 .ai-section-body h2 {
   font-family: var(--newsreader);
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-size: 24px;
   font-weight: 400;
   line-height: 1.14;
   letter-spacing: -0.02em;
   color: var(--color-black);
-  max-width: 26ch;
   margin-bottom: 0.25rem;
 }
 
@@ -409,12 +408,6 @@ main .main-items {
   font-weight: 400;
   line-height: 1.62;
   color: var(--color-greyText);
-}
-
-.ai-p--lede {
-  font-size: 1.375rem;
-  line-height: 1.55;
-  color: var(--color-black);
 }
 
 .ai-note {
@@ -967,7 +960,7 @@ main .main-items {
   }
 
   .ai-hero h1 {
-    font-size: clamp(2.4rem, 11vw, 3.4rem);
+    font-size: 2.5rem;
     max-width: none;
   }
 
@@ -1000,12 +993,10 @@ main .main-items {
   }
 
   .ai-section-body h2 {
-    font-size: clamp(1.6rem, 7vw, 2.1rem);
-    max-width: none;
+    font-size: 24px;
   }
 
-  .ai-p,
-  .ai-p--lede {
+  .ai-p {
     font-size: 1.0625rem;
   }
 
@@ -1165,35 +1156,18 @@ main .main-items {
   scroll-margin-top: 6rem;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .ai-content-layout {
     grid-template-columns: minmax(0, 1fr);
     gap: 2rem;
   }
 
-  .ai-content-layout .ai-sections,
-  .ai-toc {
+  .ai-content-layout .ai-sections {
     grid-column: 1;
-    grid-row: auto;
+    grid-row: 1;
   }
 
   .ai-toc {
-    position: static;
-    order: -1;
-    border-left: 0;
-    border-bottom: 1px solid var(--ai-rule);
-    padding: 0 0 1.25rem;
-  }
-
-  .ai-toc-list {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.75rem 1rem;
-  }
-}
-
-@media (max-width: 760px) {
-  .ai-toc-list {
-    grid-template-columns: 1fr;
+    display: none;
   }
 }
